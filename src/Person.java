@@ -1,31 +1,28 @@
 public class Person {
-    // instance variables
-    private String firstName;
-    private String lastName;
-    private int age;
-    private String address;
+    //instance variables
+    String firstName;
+    String lastName;
+    int age;
+    String Address;
 
-    // static variable
-    private static int personCount;
-
-    // constructor
-    public Person(String firstName, String lastName, int age, String address) {
+    static int personCount;
+    //constructor
+    public Person(String firstName, String lastName, int age, String Address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.address = address;
+        this.Address = Address;
         personCount++;
     }
-
-    // methods
-    void getDetails() {
-        System.out.println("First name: " + this.firstName);
-        System.out.println("Last name: " + this.lastName);
-        System.out.println("Age: " + this.age);
-        System.out.println("Address: " + this.address);
+    //getDetails method
+    public void getDetails(){
+        System.out.println("First name: " + firstName);
+        System.out.println("Last name: " + lastName);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + Address);
     }
+    //getters/setters
 
-    // getters and setters
     public String getFirstName() {
         return firstName;
     }
@@ -51,14 +48,15 @@ public class Person {
     }
 
     public String getAddress() {
-        return address;
+        return Address;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        Address = address;
     }
 
-    public static int getPersonCount() {
+    //getPersonCount method
+    static public int getPersonCount() {
         return personCount;
     }
 }
